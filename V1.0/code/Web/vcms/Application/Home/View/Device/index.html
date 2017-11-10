@@ -125,7 +125,6 @@
                 $("#data_table :checkbox").each(function () {
                     $(this).prop("checked", !$(this).prop("checked"));
                 });
-
             });
 
             $("#deleteBtn").click(function () {
@@ -170,9 +169,6 @@
             });
 
         });
-
-
-
 
         function page1reload() {
             window.location.reload();
@@ -242,7 +238,6 @@
                     $("#deviceMonitor_detailinfo").html(htmlstr + data);
                 },
             })
-
         }
 
         $("#hisTaskCountBtn").click(function () {
@@ -310,7 +305,6 @@
                     myChart.setOption(option);
                 },
             })
-
         });
 
         $("#input_uploadtimebegin").datetimepicker();
@@ -336,7 +330,6 @@
             showSecond: true, //显示秒
             timeFormat: 'HH:mm:ss' //格式化时间
         });
-
 
         $("#countbytime").click(function () {
             var timebegin = $("#input_uploadtimebegin").val();
@@ -365,7 +358,6 @@
                         allcount += data1[1][m];
                     }
                     $("#his_zrvallnum span").text(allcount);
-
 
                     // 基于准备好的dom，初始化echarts图表
                     myChart = echarts.init(document.getElementById('Histogram'), 'macarons');
@@ -405,9 +397,7 @@
                     myChart.setOption(option);
                 },
             })
-
         });
-
 
         function gettaskdetail(rcdnum) {
             window.clearInterval(int2);
@@ -449,7 +439,6 @@
                         close: function (event, ui) {
                             int2 = setInterval("page2reload()", 10000);
                         }
-
                     });
                 },
             })
